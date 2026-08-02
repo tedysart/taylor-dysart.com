@@ -28,6 +28,7 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 28px 32px; max-width: 1080px; margin: 0 auto;
   border-bottom: 1px solid var(--rule);
+  position: relative;
 }
 .brand {
   font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em;
@@ -161,5 +162,17 @@ footer {
   .section-inner { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .entry { grid-template-columns: 1fr; gap: 6px; }
-  .navlinks { display: none; }
+  .navlinks {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--paper); flex-direction: column; gap: 0;
+    border-bottom: 1px solid var(--rule); padding: 6px 32px 14px; z-index: 20;
+  }
+  .navlinks.open { display: flex; }
+  .navlinks a { padding: 12px 0; border-top: 1px solid var(--rule); opacity: 1; }
+  .navlinks a:first-child { border-top: none; }
+  .nav-toggle { display: block; }
+}
+.nav-toggle {
+  display: none; background: none; border: none; font-size: 22px;
+  line-height: 1; color: var(--ink); cursor: pointer; padding: 4px 6px;
 }
