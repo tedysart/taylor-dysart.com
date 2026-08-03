@@ -127,6 +127,19 @@ nav {
   .clip-right, .clip-left { float: none; width: 100%; margin: 4px 0 18px; transform: none; }
 }
 
+.cookie-notice {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: var(--forest-deep); color: var(--paper);
+  font-family: 'IBM Plex Mono', monospace; font-size: 12.5px;
+  padding: 14px 24px; display: flex; align-items: center; justify-content: center;
+  gap: 20px; flex-wrap: wrap; text-align: center;
+}
+.cookie-notice button {
+  background: var(--paper); color: var(--forest-deep); border: none;
+  font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500;
+  padding: 7px 16px; border-radius: 3px; cursor: pointer; letter-spacing: 0.03em;
+}
+
 /* research/works cards & lists */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 8px; }
 .card { background: var(--paper); padding: 26px 22px; }
